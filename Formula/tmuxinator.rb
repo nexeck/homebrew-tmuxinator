@@ -1,8 +1,9 @@
 class Tmuxinator < Formula
   desc "Install Tmuxinator as Homebrew formulae"
   homepage "https://github.com/tmuxinator/tmuxinator"
-  url "https://github.com/tmuxinator/tmuxinator/archive/v0.13.0.tar.gz"
-  sha256 "48d2d83fa93a394fde310375c54425958934e8dc9e202902d5c4c7cb9146c151"
+  version "0.15.0"
+  url "https://github.com/tmuxinator/tmuxinator/archive/v#{version}.tar.gz"
+  sha256 "e5c121126aebe3afc758c0561b8ef05508712a799d3821453063b87445806ed4"
   head "https://github.com/tmuxinator/tmuxinator.git"
 
   bottle :unneeded
