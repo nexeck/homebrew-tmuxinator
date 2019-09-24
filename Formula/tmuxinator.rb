@@ -1,17 +1,16 @@
 class Tmuxinator < Formula
-  desc "Install Tmuxinator as Homebrew formulae"
+  desc "Manage complex tmux sessions easily"
   homepage "https://github.com/tmuxinator/tmuxinator"
-  version "0.15.0"
-  url "https://github.com/tmuxinator/tmuxinator/archive/v#{version}.tar.gz"
-  sha256 "e5c121126aebe3afc758c0561b8ef05508712a799d3821453063b87445806ed4"
+  url "https://github.com/tmuxinator/tmuxinator/archive/v1.1.1.tar.gz"
+  sha256 "cc293578bca43ba5cf0d60c1355c6aa1da9d923a0acc274a47ceab03812a6ef4"
   head "https://github.com/tmuxinator/tmuxinator.git"
 
-  bottle :unneeded
+  depends_on "ruby" => "2.4.6"
 
   def install
     ENV["GEM_HOME"] = libexec
     system "gem", "build", "tmuxinator.gemspec"
-    system "gem", "install", "tmuxinator-#{version}.gem"
+    system "gem", "install", "tmuxinator-1.1.1.gem"
     bin.install libexec/"bin/tmuxinator"
     bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])
   end
